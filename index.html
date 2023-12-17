@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, and Scissor</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <!-- Import font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <!-- Import pre-built animation style from animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Score Horizontal Bar -->
+    <div class="score-container">
+        <div class="circle">
+            <p>You</p>
+            <p id="player-score">0</span>
+        </div>
+        <div class="circle">
+            <p>Foe</p>
+            <p id="opponent-score">0</span>
+        </div>
+    </div>
+
+    <!-- Hand Horizontal Bar -->
+    <div class="hand-container">
+        <img src="images/scissor.png" alt="Your Hand" id="player-move-image">
+        <img src="images/scissor.png" alt="Opponent Hand" id="opponent-move-image">
+        </div>
+    </div>
+
+    </div>
+    <h2 id="display-text">Reaches 5 points to win</h2>
+    <div class="select-container">
+        <button class="select-button" id="paper">
+            <img src="images/paper-icon.png" alt="Paper">
+        </button>
+        <button class="select-button" id="scissor">
+            <img src="images/scissor-icon.png" alt="Scissors">
+        </button>
+        <button class="select-button" id="rock">
+            <img src="images/rock-icon.png" alt="Rock">
+        </button>
+    </div>
+
+    <footer>
+        Wallik Game
+    </footer>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>🥳 You Win 🥳</h2>
+            <!-- <a class="close" href="#">&times;</a> -->
+            <div class="content">
+                <a href="#" id="retryButton">Play Again</a>
+            </div>
+        </div>
+    </div>     
+
+    
+
+    <script src="./index.js"></script>
+</body>
+</html>

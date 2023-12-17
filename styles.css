@@ -1,0 +1,245 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    height: 100vh;
+}
+
+#display-text{
+    font-size: 2.5rem;
+}
+.score-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+
+.hand-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.hand-container img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    max-width: 65%;
+    margin: 0px;
+    width:95%;
+}
+
+.hand-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* height:30vh; */
+}
+
+
+.circle {
+    background-color: #fff;
+    font-size: 24px;
+    border-radius: 100%;
+    padding: 15px;
+    text-align: center;
+    width: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.circle p{
+    margin:0px;
+}
+h2 {
+    text-align: center;
+    color: #333;
+
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    width: 100%;
+    margin-left: 0;  /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+}
+
+.select-button {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 10px 15px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.select-button:hover {
+    background: #f0f0f0;
+}
+
+.select-button img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+footer{
+    margin-top: 5%;
+    color: #333;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+#player-move-image{
+    justify-self:start;
+}
+
+#opponent-move-image{
+    justify-self:end;
+    transform: rotateY(180deg);
+}
+
+button[disabled]{
+    background-color: dimgrey;
+    color: linen;
+    opacity: 1;
+}
+
+
+/* Popup Css */
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+#retryButton {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 16px; /* Font size of the text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style on hover */
+    text-decoration: none;
+}
+
+#retryButton:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+/* Custom animate.css */
+/* we added slideInRightWithRotate to preserve the rotation of opponent-move-image while animated */
+
+@-webkit-keyframes customAnimate__slideInRightWithRotate {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+@keyframes customAnimate__slideInRightWithRotate {
+from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0) rotateY(180deg);;
+    visibility: visible;
+}
+
+to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) rotateY(180deg);;
+}
+}
+.customAnimate__slideInRightWithRotate {
+    -webkit-animation-name: customAnimate__slideInRightWithRotate;
+    animation-name: customAnimate__slideInRightWithRotate;
+    }
+  
+@keyframes customAnimate__colorAnimation {
+0% {
+    background-color: #fff;
+}
+100% {
+    background-color: rgb(45, 187, 45);
+}
+}
+
+.customAnimate__colorAnimation{
+    animation-name: customAnimate__colorAnimation;
+}
+
+.green{
+    background:rgb(170, 235, 170);
+}
+
+.red{
+    background:rgb(253, 125, 103);
+}
